@@ -132,6 +132,12 @@ etherscanUrl network urlValue =
         BaseGoerli ->
             Just ("https://goerli.basescan.org/" ++ linkType ++ "/" ++ linkValue)
 
+        Bsc ->
+            Just ("https://bscscan.org/" ++ linkType ++ "/" ++ linkValue)
+
+        BscTestnet ->
+            Just ("https://testnet.bscscan.org/" ++ linkType ++ "/" ++ linkValue)
+
         _ ->
             Nothing
 

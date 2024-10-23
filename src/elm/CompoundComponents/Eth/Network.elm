@@ -25,6 +25,8 @@ type Network
     | Base
     | BaseGoerli
     | Scroll
+    | Bsc
+    | BscTestnet
 
 
 networkFromId : Int -> Network
@@ -93,6 +95,12 @@ networkFromId networkIdVal =
         534352 ->
             Scroll
 
+        56 ->
+            Bsc
+
+        97 ->
+            BscTestnet
+
         _ ->
             Unknown
 
@@ -117,6 +125,12 @@ networkFromName name =
 
         "development" ->
             Development
+
+        "bsc" ->
+            Bsc
+
+        "bsctestnet" ->
+            BscTestnet
 
         _ ->
             MainNet
@@ -185,6 +199,12 @@ networkName network =
         Scroll ->
             "Scroll"
 
+        Bsc ->
+            "Bsc"
+
+        BscTestnet ->
+            "BscTestnet"
+
         Unknown ->
             "unknown"
 
@@ -252,6 +272,12 @@ networkId network =
         Scroll ->
             534352
 
+        Bsc ->
+            56
+
+        BscTestnet ->
+            97
+
         Unknown ->
             9999
 
@@ -315,6 +341,12 @@ getEtherscanDomain network =
 
         Scroll ->
             Just "scrollscan.com"
+
+        Bsc ->
+            Just "bscscan.com"
+
+        BscTestnet ->
+            Just "testnet.bscscan.com"
 
         Development ->
             Nothing

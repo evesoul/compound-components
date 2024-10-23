@@ -101,6 +101,12 @@ function networkFromId(id) {
     case 99:
       return 'core';
 
+    case 56:
+      return 'bsc';
+
+    case 97:
+      return 'bsctestnet';
+
     case 999:
       return 'development';
 
